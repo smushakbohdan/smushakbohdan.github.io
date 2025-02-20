@@ -108,3 +108,16 @@ body {
   background-color: #1a3d5c;
   border-radius: 5px;
 }
+.work-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #2e5c8a; 
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+.work-btn:hover {
+    background-color: #0056b3; 
+}
