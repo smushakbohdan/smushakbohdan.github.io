@@ -7,75 +7,83 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <nav class="menu">
-    <ul>
-      <li><a href="#experience">Головна</a></li>
-      <li><a href="#works">Портфоліо</a></li>
-      <li><a href="#contacts">Контакти</a></li>
-    </ul>
-  </nav>
+  <header>
+    <nav class="menu">
+      <ul>
+        <li><a href="#experience">Досвід роботи</a></li>
+        <li><a href="#works">Портфоліо</a></li>
+        <li><a href="#contacts">Контакти</a></li>
+      </ul>
+    </nav>
+  </header>
   <div class="container">
     <aside class="sidebar">
-      <img src="photo.png" alt="Моє фото">
-      <h1>Особисті дані</h1>
-      <ul class="contact-info">
+      <figure>
+        <img src="photo.png" alt="Моє фото">
+      </figure>
+      <section>
+        <header>
+          <h2>Особисті дані</h2>
+        </header>
+        <ul class="contact-info">
           <li>
-            <strong>Ім'я</strong> 
+            <strong>Ім'я:</strong>
             <p>Смушак Богдан</p>
           </li>
           <li>
-            <strong>Адреса</strong> 
-              <p>м. Івано-Франківськ</p>
-              <p>вул. Ніякова 23А кв.21</p>
-          </li>
-           <li>
-            <strong>Номер телефону</strong> 
-              <p>+38045690765</p>
+            <strong>Адреса:</strong>
+            <p>м. Івано-Франківськ</p>
+            <p>вул. Ніякова 23А кв.21</p>
           </li>
           <li>
-            <strong>Email</strong> 
-              <p>e@mail.com</p>
+            <strong>Номер телефону:</strong>
+            <p>+38045690765</p>
           </li>
-           <li>
-            <strong>Дата народження</strong> 
-              <p>07.12.2005</p>
+          <li>
+            <strong>Email:</strong>
+            <p>e@mail.com</p>
           </li>
-      </ul>
-      <h1>Інтереси</h1>
-            <ul class="contact-info">
-                <li>
-                  <p>Програмування</p>
-                </li>
-                <li>
-                    <p>Монтаж</p>
-                </li>
-                <li>
-                    <p>Ігри</p>
-                </li>
-            </ul>
-      <h1>Мови</h1>
-            <ul class="contact-info">
-                <li class="tst">
-                  Англійська <span>B1</span>
-                </li>
-                <li class="tst">
-                  Українська <span>Рідна мова </span>
-                </li>
-            </ul>
+          <li>
+            <strong>Дата народження:</strong>
+            <p><time datetime="2005-12-07">07.12.2005</time></p>
+          </li>
+        </ul>
+      </section>
+      <section>
+        <header>
+          <h2>Інтереси</h2>
+        </header>
+        <ul class="contact-info">
+          <li><p>Програмування</p></li>
+          <li><p>Монтаж</p></li>
+          <li><p>Ігри</p></li>
+        </ul>
+      </section>
+      <section>
+        <header>
+          <h2>Мови</h2>
+        </header>
+        <ul class="contact-info">
+          <li class="tst">Англійська <span>B1</span></li>
+          <li class="tst">Українська <span>Рідна мова</span></li>
+        </ul>
+      </section>
     </aside>
     <main class="content">
       <section id="experience">
-        <h1>Досвід роботи</h1>
+        <header>
+          <h2>Досвід роботи</h2>
+        </header>
         <ul>
           <li>
-            <strong>Java-розробник</strong> (EPAM, Івано-Франківськ)
+            <strong>Java-розробник (EPAM, Івано-Франківськ)</strong>
             <ul>
               <li>Розробка корпоративних проектів</li>
               <li>Оптимізація коду та підтримка</li>
             </ul>
           </li>
           <li>
-            <strong>Веб-розробник</strong> (SoftServe, Івано-Франківськ)
+            <strong>Веб-розробник (SoftServe, Івано-Франківськ)</strong>
             <ul>
               <li>Створення адаптивних сайтів</li>
               <li>Розробка за технологіями HTML, CSS, JavaScript</li>
@@ -84,18 +92,24 @@
         </ul>
       </section>
       <section id="education">
-        <h1>Освіта</h1>
-        <p>Закінчив: Фаховий коледж електронних приладів</p>
+        <header>
+          <h2>Освіта</h2>
+        </header>
+        <p>Вчусь: Фаховий коледж електронних приладів</p>
       </section>
       <section id="courses">
-        <h1>Курси</h1>
+        <header>
+          <h2>Курси</h2>
+        </header>
         <ol>
           <li>Англійська для IT</li>
           <li>Cisco: мульти курс комп'ютерних напрямків</li>
         </ol>
       </section>
       <section id="skills">
-        <h1>Навички</h1>
+        <header>
+          <h2>Навички</h2>
+        </header>
         <ul>
           <li>
             Мови програмування:
@@ -110,15 +124,22 @@
         </ul>
       </section>
       <section id="works">
-          <h1>Мої роботи</h1>
-          <a href="lb1/index.html" class="work-btn">Лабораторна Робота №1</a>
+        <header>
+          <h2>Мої роботи</h2>
+        </header>
+        <p><a href="lb1/index.html" class="work-btn">Лабораторна Робота №1</a></p>
       </section>
       <section id="contacts">
-        <h1>Контакти</h1>
-        <p>Email: e@mail.com</p>
-        <p>Телефон: +38045690765</p>
+        <header>
+          <h2>Контакти</h2>
+        </header>
+        <p>Email: <a href="mailto:e@mail.com">e@mail.com</a></p>
+        <p>Телефон: <a href="tel:+38045690765">+38045690765</a></p>
       </section>
     </main>
   </div>
+  <footer>
+    <p>&copy; 2025 Смушак Богдан. Всі права захищено.</p>
+  </footer>
 </body>
 </html>
