@@ -21,13 +21,7 @@ body {
 .container span {
   text-align: right;
 }
-.container h1 {
-  color: #ffffff;
-  border-bottom: 2px solid #ffffff;
-  padding-bottom: 5px;
-  margin-bottom: 10px;
-  text-align: left;
-}
+
 .sidebar {
   width: 30%;
   background-color: #2e5c8a;
@@ -42,6 +36,13 @@ body {
   object-fit: cover;
   border: 3px solid #fff;
   margin-bottom: 15px;
+}
+.sidebar header h2 {
+  color: #fff;
+  border-bottom: 2px solid #fff;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+  text-align: left;
 }
 .sidebar h2 {
   margin-bottom: 10px;
@@ -60,14 +61,22 @@ body {
   width: 70%;
   padding: 20px;
 }
-.content section {
-  margin-bottom: 20px;
-}
-.content h1 {
+.content header h2 {
   color: #2e5c8a;
   border-bottom: 2px solid #2e5c8a;
   padding-bottom: 5px;
   margin-bottom: 10px;
+  text-align: left;
+}
+.content header h3 {
+  color: #2e5c8a;
+  border-bottom: 2px solid #2e5c8a;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+  text-align: left;
+}
+.content section {
+  margin-bottom: 20px;
 }
 .content ul, .content ol {
   margin-left: 20px;
@@ -109,15 +118,15 @@ body {
   border-radius: 5px;
 }
 .work-btn {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #2e5c8a; 
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: background 0.3s ease;
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #2e5c8a; 
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background 0.3s ease;
 }
 .work-btn:hover {
-    background-color: #0056b3; 
+  background-color: #0056b3; 
 }
