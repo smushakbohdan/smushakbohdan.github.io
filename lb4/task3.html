@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Styled Title</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+        .title {
+            position: relative;
+            display: inline-block;
+        }
+        .title::before,
+        .title::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            width: 200px; 
+            height: 3px;
+            background-color: black;
+        }
+        .title::before {
+            left: -210px; 
+        }
+        .title::after {
+            right: -210px;
+        }
+    </style>
+</head>
+<body>
+    <div class="title">TITLE</div>
+</body>
+</html>
