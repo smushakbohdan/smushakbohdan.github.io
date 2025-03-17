@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: "Inter", sans-serif;
+}
+img {
+    display: block;
+    width: 100%;
+}
+.page-wrapper {
+    max-width: 860px;
+    width: 100%;
+    margin: 40px auto;
+    padding: 30px 10px 20px;
+    background-color: #008499;
+}
+.content-wrap {
+    padding: 0 20px 20px;
+    background-color: #fff;
+}
+header {
+    height: 138px;
+    background-image: url("../images/header.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+main {
+    padding: 20px 30px;
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+.mb-15 {
+    margin-bottom: 15px;
+}
+.mb-20 {
+    margin-bottom: 20px;
+}
+.d-block {
+    display: block;
+}
+.t-center {
+    text-align: center;
+}
+.list { 
+    padding-left: 60px;
+}
+.services-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+.services-list-item {
+    width: calc(33.33% - 13.33px); 
+}
+.services-list-item img {
+    margin-bottom: 10px;
+}
+.services-list-item__title {
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+.btn {
+    height: 50px;
+    border: none;
+    border-radius: 5px;
+    line-height: 50px;
+    background-color: #f53947;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.btn:hover {
+    background-color: #d12b34;
+}
+.text-section a[href^='tel:'] {
+    color: #f53947;
+    text-decoration: none;
+}
+.link-btn {
+    display: block;
+    text-decoration: none;
+}
+footer {
+    padding: 25px 0;
+    background-color: #008499;
+    color: #fff;
+}
+.social-links {
+    font-size: 2rem;
+}
+.social-links a {
+    color: #fff;
+    transition: color 0.3s ease;
+    text-decoration: none;
+}
+.social-links a:not(:last-child) {
+    margin-right: 15px;
+}
+footer p:nth-child(2) {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+    padding-bottom: 10px;
+}
+footer p:last-child a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+
+}
+footer p:last-child a:hover {
+    color: #d12b34;
+}
+
