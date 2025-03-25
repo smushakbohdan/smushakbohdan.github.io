@@ -167,7 +167,7 @@ div{
 }
 #hexagon{
 	width: 100px;
-	height: 55px;
+	height: 56px;
 	background: #fc5e5e;
 	position: relative;
 }
@@ -176,7 +176,7 @@ div{
 	width: 0;
 	height: 0;
 	position: absolute;
-	top: -25px;
+	top: -24px;
 	left: 0;
 	border-left: 50px solid transparent;
 	border-right: 50px solid transparent;
@@ -187,7 +187,7 @@ div{
 	width: 0;
 	height: 0;
 	position: absolute;
-	bottom: -25px;
+	bottom: -24px;
 	left: 0;
 	border-left: 50px solid transparent;
 	border-right: 50px solid transparent;
