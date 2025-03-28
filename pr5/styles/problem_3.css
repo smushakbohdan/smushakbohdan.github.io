@@ -1,0 +1,29 @@
+div { 
+  font-size: 14px;
+  font-family: Oswald; 
+  color: #333; 
+  text-align: center; 
+  text-transform: uppercase; 
+}
+.wrapper:after{ 
+  content: " ";
+  display: table;
+  clear: both;
+}
+.section { 
+  box-sizing: border-box; /*!браузер автоматично включатиме відступи, поля та рамку в задану нами ширину блоку!*/
+  padding: 40px 10px;
+  height: 200px; 
+  float: left;
+  width: 33.333333%;
+}
+.b2{background-color: #ddd;}
+.b1, .b3{ background-color:#ccc; }
+#header, 
+#footer { 
+  clear: both; 
+  width: 100%; 
+  height: 100px; 
+  background-color: #eee;
+  margin: 10px 0; 
+}
