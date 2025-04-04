@@ -1,0 +1,58 @@
+ body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.pricing-card {
+    width: 300px;
+    border: 5px solid #ddd;
+    text-align: center;
+    overflow: hidden;
+    border-top: 5px solid #00c853;
+    border-bottom: 5px solid #00c853;
+}
+.header {
+    background-color: white;
+    color: #00c853;
+    padding: 15px;
+    font-size: 30px;
+    font-weight: bold;
+}
+.price {
+    background-color: #00c853;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 15px;
+}
+.options {
+    list-style: none;
+    margin-block-end: 5px;
+
+}
+.options li { padding: 10px;}
+.options li:nth-child(odd) { background-color: white;}
+.options li:nth-child(even) { background-color: #f0f0f0;}
+.purchase-btn {
+    background-color: transparent;
+    border: 2px solid #00c853;
+    color: #00c853;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+.purchase-btn:hover {
+    background-color: #00c853;
+    color: white;
+    transition: background-color 0.3s, color 0.3s;
+}

@@ -1,0 +1,39 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body { padding: 20px;}
+.float-table {
+    width: 100%;
+    margin: 20px 0;
+    border: 1px solid black;
+}
+.row {
+    clear: both;
+    width: 100%;
+}
+.cell {
+    float: left;
+    width: 16.666%; 
+    padding: 12px;
+    border: 1px solid black;
+    background-color: #e6ffd3;
+}
+.cell:nth-child(even) {
+    background-color: #d5ffb9;
+}
+.main-header .cell {
+    width: 100%;
+    background-color: #5dc430;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.float-table::after {
+    content: "";
+    display: table;
+    clear: both;
+}

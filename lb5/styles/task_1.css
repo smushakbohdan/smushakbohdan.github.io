@@ -1,0 +1,25 @@
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 20px 0;
+}
+th, td {
+    border: 1px solid white;
+    padding: 8px;
+    text-align: left;
+}
+tr:first-child th {
+    background-color: #94cce8 !important;
+    color: white;
+}
+tr:not(:first-child) td:first-child {
+    background-color: #94cce8;
+    color: white;
+}
+td {
+    background-color: #cde6f4;
+}
+tr:not(:first-child) th {
+    background-color: #cde6f4;
+    color: white;
+}

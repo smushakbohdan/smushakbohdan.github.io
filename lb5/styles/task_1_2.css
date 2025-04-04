@@ -1,0 +1,40 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px 0;
+}
+.table-container {
+    width: 100%;
+    margin: 20px 0;
+}
+.row {
+    clear: both;
+    width: 100%;
+}
+.cell {
+    float: left;
+    width: 20%; 
+    padding: 12px;
+    border: 1px solid white;
+}
+.header .cell {
+    background-color: #94cce8;
+    color: white;
+    font-weight: bold;
+}
+.cell.company {
+    background-color: #94cce8;
+    color: white;
+}
+.row:not(.header) .cell:not(.company) {
+    background-color: #cde6f4;
+}
+.table-container::after {
+    content: "";
+    display: table;
+    clear: both;
+}

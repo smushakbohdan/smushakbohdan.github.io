@@ -1,0 +1,117 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+    flex-wrap: wrap;
+    margin: 20px;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container {
+    width: 300px;
+    border: 2px solid;
+    text-align: center;
+    overflow: hidden;
+    margin: 10px;
+    float: left;
+}
+.s1, .s2, .s3 {
+    border-bottom: 10px solid;
+}
+.s1 {
+    border-color: #00c853;
+    border-bottom-color: #006400;
+}
+.s2 {
+    border-color: #f39c12;
+    border-bottom-color: #d35400;
+}
+.s3 {
+    border-color: #e74c3c;
+    border-bottom-color: #c0392b;
+}
+.price {
+    background-color: transparent;
+    color: black;
+    font-size: 40px;
+    font-weight: bold;
+    padding: 15px;
+    position: relative;
+    top: 0;
+    margin: 0;
+}
+.s1 .price {
+    background-color: #00c853;
+    color: white;
+}
+.s2 .price {
+    background-color: #f39c12;
+    color: white;
+}
+.s3 .price {
+    background-color: #e74c3c;
+    color: white;
+}
+.header {
+    background-color: transparent;
+    color: white;
+    padding: 15px;
+    font-size: 30px;
+    border-bottom: 10px solid;
+}
+.s1 .header {
+    background-color: #00c853;
+    border-bottom-color: #006400;
+}
+.s2 .header {
+    background-color: #f39c12;
+    border-bottom-color: #d35400;
+}
+.s3 .header {
+    background-color: #e74c3c;
+    border-bottom-color: #c0392b;
+}
+.options {
+    list-style: none;
+    margin-block-end: 5px;
+}
+.options li {
+    padding: 10px;
+}
+.purchase-btn {
+    background-color: transparent;
+    border: 2px solid;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+.s1 .purchase-btn {background-color: #00c853;}
+.s2 .purchase-btn {background-color: #f39c12;}
+.s3 .purchase-btn {background-color: #e74c3c;}
+.s1 .purchase-btn:hover {
+    background-color: #006400;
+    color: white;
+    transition: background-color 0.3s, color 0.3s;
+}
+.s2 .purchase-btn:hover {
+    background-color: #d35400;
+    color: white;
+    transition: background-color 0.3s, color 0.3s;
+}
+.s3 .purchase-btn:hover {
+    background-color: #c0392b;
+    color: white;
+    transition: background-color 0.3s, color 0.3s;
+}
+.line {
+    border-bottom: 2px dashed #ccc;
+    margin: 10px 15px;
+}
