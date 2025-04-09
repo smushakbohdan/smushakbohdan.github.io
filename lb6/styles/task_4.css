@@ -1,0 +1,106 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+.container {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    max-width: 800px;
+}
+.title {
+    text-align: center;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #5f9ea0;
+}
+.calculator {
+    background-color: white;
+    padding: 20px;
+    border: 2px solid #5f9ea0;
+    border-radius: 10px;
+    width: 220px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    margin: 0 15px;
+}
+.brand-header {
+    background-color: #5f9ea0;
+    margin: 10px -20px 10px -20px;
+    padding: 10px 0;
+    text-align: right;
+    height: 20px;
+    line-height: 20px;
+}
+.brand-name {
+    color: white;
+    padding-right: 10px;
+    font-size: 14px;
+    font-weight: bold;
+}
+.display {
+    width: calc(100% - 10px);
+    height: 40px;
+    margin-bottom: 10px;
+    text-align: right;
+    font-size: 1.2em;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: white;
+    border: 2px solid #5f9ea0;
+    color: #5f9ea0;
+}
+button {
+    height: 50px;
+    border: 2px solid #5f9ea0;
+    border-radius: 5px;
+    background-color: white;
+    color: #5f9ea0;
+    font-size: 1em;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #5f9ea0;
+    color: white;
+}
+button:active {
+    background-color: #3a6e70;
+    color: white;
+}
+.float-calculator .buttons {
+    overflow: hidden;
+}
+.float-calculator button {
+    float: left;
+    width: 23%;
+    margin: 1%;
+}
+.position-calculator .buttons {
+    position: relative;
+    height: 220px;
+}
+.position-calculator button {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+}
+.position-calculator button:nth-child(1) { left: 0; top: 0; }
+.position-calculator button:nth-child(2) { left: 56px; top: 0; }
+.position-calculator button:nth-child(3) { left: 112px; top: 0; }
+.position-calculator button:nth-child(4) { left: 168px; top: 0; }
+.position-calculator button:nth-child(5) { left: 0; top: 56px; }
+.position-calculator button:nth-child(6) { left: 56px; top: 56px; }
+.position-calculator button:nth-child(7) { left: 112px; top: 56px; }
+.position-calculator button:nth-child(8) { left: 168px; top: 56px; }
+.position-calculator button:nth-child(9) { left: 0; top: 112px; }
+.position-calculator button:nth-child(10) { left: 56px; top: 112px; }
+.position-calculator button:nth-child(11) { left: 112px; top: 112px; }
+.position-calculator button:nth-child(12) { left: 168px; top: 112px; }
+.position-calculator button:nth-child(13) { left: 0; top: 168px; }
+.position-calculator button:nth-child(14) { left: 56px; top: 168px; }
+.position-calculator button:nth-child(15) { left: 112px; top: 168px; }
+.position-calculator button:nth-child(16) { left: 168px; top: 168px; }
