@@ -66,8 +66,6 @@ body {
   width: 70%;
   padding: 20px;
 }
-
-/* Стилізація заголовків у основному контенті */
 .content header h2 {
   color: #2e5c8a;
   border-bottom: 2px solid #2e5c8a;
@@ -139,4 +137,18 @@ body {
 }
 .work-btn:hover {
   background-color: #0056b3; 
+}
+.social-icons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+.social-icons svg {
+  width: 30px;
+  height: 30px;
+  transition: transform 0.3s ease;
+}
+.social-icons a:hover svg {
+  transform: scale(1.2);
 }
