@@ -1,10 +1,5 @@
 body {
     font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    height: 100vh;
-    flex-wrap: wrap;
     margin: 20px;
 }
 * {
@@ -18,7 +13,7 @@ body {
     text-align: center;
     overflow: hidden;
     margin: 10px;
-    float: left;
+    float: left; 
 }
 .s1, .s2, .s3 {
     border-bottom: 10px solid;
@@ -114,4 +109,9 @@ body {
 .line {
     border-bottom: 2px dashed #ccc;
     margin: 10px 15px;
+}
+.container::after {
+    content: "";
+    display: block;
+    clear: both;
 }
