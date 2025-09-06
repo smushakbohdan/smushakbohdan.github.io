@@ -3,173 +3,380 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Моє Резюме</title>
+  <title>Портфоліо - Смушак Богдан</title>
   <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
-  <header>
-    <nav class="menu">
-      <ul>
-        <li><a href="#experience">Досвід роботи</a></li>
-        <li><a href="#works">Портфоліо</a></li>
-        <li><a href="#contacts">Контакти</a></li>
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <span class="logo-text">БС</span>
+      </div>
+      <ul class="nav-menu">
+        <li><a href="#about" class="nav-link">Про мене</a></li>
+        <li><a href="#works" class="nav-link">Портфоліо</a></li>
+        <li><a href="#skills" class="nav-link">Навички</a></li>
+        <li><a href="#contacts" class="nav-link">Контакти</a></li>
       </ul>
-    </nav>
-  </header>
-  <div class="container">
-    <aside class="sidebar">
-      <figure>
-        <img src="image/photo.png" alt="Моє фото">
-      </figure>
-      <section>
-        <header>
-          <h2>Особисті дані</h2>
-        </header>
-        <ul class="contact-info">
-          <li>
-            <strong>Ім'я:</strong>
-            <p>Смушак Богдан</p>
-          </li>
-          <li>
-            <strong>Адреса:</strong>
-            <p>м. Івано-Франківськ</p>
-            <p>вул. Ніякова 23А кв.21</p>
-          </li>
-          <li>
-            <strong>Номер телефону:</strong>
-            <p>+38045690765</p>
-          </li>
-          <li>
-            <strong>Email:</strong>
-            <p>e@mail.com</p>
-          </li>
-          <li>
-            <strong>Дата народження:</strong>
-            <p><time datetime="2005-12-07">07.12.2005</time></p>
-          </li>
-        </ul>
-      </section>
-      <section>
-        <header>
-          <h2>Інтереси</h2>
-        </header>
-        <ul class="contact-info">
-          <li><p>Програмування</p></li>
-          <li><p>Монтаж</p></li>
-          <li><p>Ігри</p></li>
-        </ul>
-      </section>
-      <section>
-        <header>
-          <h2>Мови</h2>
-        </header>
-        <ul class="contact-info">
-          <li class="tst">Англійська <span>B1</span></li>
-          <li class="tst">Українська <span>Рідна мова</span></li>
-        </ul>
-      </section>
-      <section class="social-icons">
-        <a href="https://facebook.com" target="_blank" aria-label="Facebook">
-          <svg class="icon">
-            <use xlink:href="sprite.svg#icon-facebook"></use>
-          </svg>
-        </a>
-        <a href="https://instagram.com" target="_blank" aria-label="Instagram">
-          <svg class="icon">
-            <use xlink:href="sprite.svg#icon-instagram"></use>
-          </svg>
-        </a>
-        <a href="https://youtube.com" target="_blank" aria-label="YouTube">
-          <svg class="icon">
-            <use xlink:href="sprite.svg#icon-youtube"></use>
-          </svg>
-        </a>
-      </section>
-    </aside>
-    <main class="content">
-      <section id="experience">
-        <header>
-          <h2>Досвід роботи</h2>
-        </header>
-        <ul>
-          <li>
-            <strong>Java-розробник (EPAM, Івано-Франківськ)</strong>
-            <ul>
-              <li>Розробка корпоративних проектів</li>
-              <li>Оптимізація коду та підтримка</li>
-            </ul>
-          </li>
-          <li>
-            <strong>Веб-розробник (SoftServe, Івано-Франківськ)</strong>
-            <ul>
-              <li>Створення адаптивних сайтів</li>
-              <li>Розробка за технологіями HTML, CSS, JavaScript</li>
-            </ul>
-          </li>
-        </ul>
-      </section>
-      <section id="education">
-        <header>
-          <h2>Освіта</h2>
-        </header>
-        <p>Вчусь: Фаховий коледж електронних приладів</p>
-      </section>
-      <section id="courses">
-        <header>
-          <h2>Курси</h2>
-        </header>
-        <ol>
-          <li>Англійська для IT</li>
-          <li>Cisco: мульти курс комп'ютерних напрямків</li>
-        </ol>
-      </section>
-      <section id="skills">
-        <header>
-          <h2>Навички</h2>
-        </header>
-        <ul>
-          <li>
-            Мови програмування:
-            <ul>
-              <li>Java</li>
-              <li>Python</li>
-              <li>C++</li>
-            </ul>
-          </li>
-          <li>HTML, CSS, JavaScript</li>
-          <li>Бази даних (SQL)</li>
-        </ul>
-      </section>
-      <section id="works">
-        <header>
-          <h2>Мої роботи</h2>
-        </header>
-        <p><a href="lb1/index.html" class="work-btn">Лабораторна Робота №1</a></p>
-        <p><a href="pr2_1/index.html" class="work-btn">Практична робота №2.1</a></p>
-        <p><a href="pr2_2/cossacs.html" class="work-btn">Практична робота №2.2</a></p>
-        <p><a href="lb4/index.html" class="work-btn">Лабораторна Робота №4</a></p>
-        <p><a href="pr3/index.html" class="work-btn">Практична робота №3</a></p>
-        <p><a href="pr4/index.html" class="work-btn">Практична робота №4</a></p>
-        <p><a href="pr5/index.html" class="work-btn">Практична робота №5</a></p>
-        <p><a href="lb5/index.html" class="work-btn">Лабораторна робота №5</a></p>
-        <p><a href="lb6/index.html" class="work-btn">Лабораторна робота №6</a></p>
-        <p><a href="lb7/index.html" class="work-btn">Лабораторна робота №7</a></p>
-        <p><a href="lb8/index.html" class="work-btn">Лабораторна робота №8</a></p>
-        <p><a href="LR_9/index.html" class="work-btn">Лабораторна робота №9</a></p>
-        <p><a href="LR_10/index.html" class="work-btn">Лабораторна робота №10</a></p>
-        <p><a href="Test/index.html" class="work-btn">Екзаменаційна робота</a></p>
-      </section>
-      <section id="contacts">
-        <header>
-          <h2>Контакти</h2>
-        </header>
-        <p>Email: <a href="mailto:e@mail.com">e@mail.com</a></p>
-        <p>Телефон: <a href="tel:+38045690765">+38045690765</a></p>
-      </section>
-    </main>
-  </div>
-  <footer>
-    <p>&copy; 2025 Смушак Богдан. Всі права захищено.</p>
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-container">
+      <div class="hero-content">
+        <div class="hero-text">
+          <h1 class="hero-title">
+            <span class="gradient-text">Смушак Богдан</span>
+          </h1>
+          <p class="hero-subtitle">Full-Stack Developer</p>
+          <p class="hero-description">
+            Створюю сучасні веб-рішення та програмні продукти з використанням новітніх технологій
+          </p>
+          <div class="hero-buttons">
+            <a href="#works" class="btn-primary">Переглянути роботи</a>
+            <a href="#contacts" class="btn-secondary">Зв'язатися</a>
+          </div>
+        </div>
+        <div class="hero-image">
+          <div class="image-container">
+            <img src="image/photo.png" alt="Смушак Богдан" class="profile-image">
+            <div class="image-glow"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- About Section -->
+  <section id="about" class="about">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Про мене</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="about-grid">
+        <div class="about-card">
+          <h3>Особисті дані</h3>
+          <div class="info-grid">
+            <div class="info-item">
+              <span class="info-label">Ім'я:</span>
+              <span class="info-value">Смушак Богдан</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Адреса:</span>
+              <span class="info-value">м. Івано-Франківськ<br>вул. Ніякова 23А кв.21</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Телефон:</span>
+              <span class="info-value">+38045690765</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Email:</span>
+              <span class="info-value">e@mail.com</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Дата народження:</span>
+              <span class="info-value">07.12.2005</span>
+            </div>
+          </div>
+        </div>
+        <div class="about-card">
+          <h3>Освіта</h3>
+          <p>Фаховий коледж електронних приладів</p>
+          <h3 class="mt-4">Курси</h3>
+          <ul class="course-list">
+            <li>Англійська для IT</li>
+            <li>Cisco: мульти курс комп'ютерних напрямків</li>
+          </ul>
+        </div>
+        <div class="about-card">
+          <h3>Мови</h3>
+          <div class="language-item">
+            <span>Українська</span>
+            <span class="language-level native">Рідна мова</span>
+          </div>
+          <div class="language-item">
+            <span>Англійська</span>
+            <span class="language-level intermediate">B1</span>
+          </div>
+        </div>
+        <div class="about-card">
+          <h3>Інтереси</h3>
+          <div class="interests">
+            <span class="interest-tag">Програмування</span>
+            <span class="interest-tag">Монтаж</span>
+            <span class="interest-tag">Ігри</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Skills Section -->
+  <section id="skills" class="skills">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Навички</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-category">
+          <h3>Мови програмування</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">Java</span>
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">C++</span>
+          </div>
+        </div>
+        <div class="skill-category">
+          <h3>Веб-технології</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">HTML</span>
+            <span class="skill-tag">CSS</span>
+            <span class="skill-tag">JavaScript</span>
+          </div>
+        </div>
+        <div class="skill-category">
+          <h3>Бази даних</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">SQL</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Portfolio Section -->
+  <section id="works" class="portfolio">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Портфоліо</h2>
+        <div class="section-line"></div>
+      </div>
+      <!-- Course Tabs -->
+      <div class="course-tabs">
+        <button class="tab-button active" data-course="course3">3 Курс</button>
+        <button class="tab-button" data-course="course4">4 Курс</button>
+      </div>
+      <!-- Course 3 Works -->
+      <div id="course3" class="course-content active">
+        <div class="works-grid">
+          <div class="work-card">
+            <div class="work-number">01</div>
+            <h3>Лабораторна Робота №1</h3>
+            <p>Опис роботи або використані технології</p>
+            <a href="lb1/index.html" class="work-link">Переглянути</a>
+          </div>
+          <div class="work-card">
+            <div class="work-number">02</div>
+            <h3>Практична робота №2.1</h3>
+            <p>Опис роботи або використані технології</p>
+            <a href="pr2_1/index.html" class="work-link">Переглянути</a>
+          </div>
+          <div class="work-card">
+            <div class="work-number">03</div>
+            <h3>Практична робота №2.2</h3>
+            <p>Опис роботи або використані технології</p>
+            <a href="pr2_2/cossacs.html" class="work-link">Переглянути</a>
+          </div>
+          <div class="work-card">
+            <div class="work-number">04</div>
+            <h3>Лабораторна Робота №4</h3>
+            <p>Опис роботи або використані технології</p>
+            <a href="lb4/index.html" class="work-link">Переглянути</a>
+          </div>
+          <div class="work-card">
+            <div class="work-number">05</div>
+            <h3>Практична робота №3</h3>
+            <p>Опис роботи або використані технології</p>
+            <a href="pr3/index.html" class="work-link">Переглянути</a>
+          </div>
+          <div class="work-card">
+            <div class="work-number">06</div>
+            <h3>Практична робота №4</h3>
+            <p>Опис роботи або використані технології</p>
+            <a href="pr4/index.html" class="work-link">Переглянути</a>
+          </div>
+          <div class="work-card">
+            <div class="work-number">07</div>
+            <h3>Практична робота №5</h3>
+            <p>Опис роботи або використані технології</p>
+            <a href="pr5/index.html" class="work-link">Переглянути</a>
+          </div>
+          <div class="work-card">
+            <div class="work-number">08</div>
+            <h3>Лабораторна робота №5</h3>
+            <p>Опис роботи або використані технології</p>
+            <a href="lb5/index.html" class="work-link">Переглянути</a>
+          </div>
+          <div class="work-card">
+            <div class="work-number">09</div>
+            <h3>Лабораторна робота №6</h3>
+            <p>Опис роботи або використані технології</p>
+            <a href="lb6/index.html" class="work-link">Переглянути</a>
+          </div>
+          <div class="work-card">
+            <div class="work-number">10</div>
+            <h3>Лабораторна робота №7</h3>
+            <p>Опис роботи або використані технології</p>
+            <a href="lb7/index.html" class="work-link">Переглянути</a>
+          </div>
+          <div class="work-card">
+            <div class="work-number">11</div>
+            <h3>Лабораторна робота №8</h3>
+            <p>Опис роботи або використані технології</p>
+            <a href="lb8/index.html" class="work-link">Переглянути</a>
+          </div>
+          <div class="work-card">
+            <div class="work-number">12</div>
+            <h3>Лабораторна робота №9</h3>
+            <p>Опис роботи або використані технології</p>
+            <a href="LR_9/index.html" class="work-link">Переглянути</a>
+          </div>
+          <div class="work-card">
+            <div class="work-number">13</div>
+            <h3>Лабораторна робота №10</h3>
+            <p>Опис роботи або використані технології</p>
+            <a href="LR_10/index.html" class="work-link">Переглянути</a>
+          </div>
+          <div class="work-card">
+            <div class="work-number">14</div>
+            <h3>Екзаменаційна робота</h3>
+            <p>Опис роботи або використані технології</p>
+            <a href="Test/index.html" class="work-link">Переглянути</a>
+          </div>
+        </div>
+      </div>
+      <!-- Course 4 Works-->
+      <div id="course4" class="course-content">
+        <div class="works-grid">
+          <div class="empty-state">
+            <div class="empty-icon">📚</div>
+            <h3>Роботи 4 курсу</h3>
+            <p>Роботи будуть додані незабаром</p>
+          </div>
+          <!-- Uncomment and modify when adding 4th course works -->
+          <!--
+          <div class="work-card">
+            <div class="work-number">01</div>
+            <h3>Назва роботи</h3>
+            <p>Опис роботи</p>
+            <a href="path/to/work" class="work-link">Переглянути</a>
+          </div>
+          -->
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Contact Section -->
+  <section id="contacts" class="contacts">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Контакти</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="contact-item">
+            <div class="contact-icon">📧</div>
+            <div>
+              <h4>Email</h4>
+              <a href="mailto:e@mail.com">e@mail.com</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">📱</div>
+            <div>
+              <h4>Телефон</h4>
+              <a href="tel:+38045690765">+38045690765</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">📍</div>
+            <div>
+              <h4>Адреса</h4>
+              <p>м. Івано-Франківськ<br>вул. Ніякова 23А кв.21</p>
+            </div>
+          </div>
+        </div>
+        <div class="social-links">
+          <h4>Соціальні мережі</h4>
+          <div class="social-icons">
+            <a href="https://facebook.com" target="_blank" class="social-icon">
+              <span>Facebook</span>
+            </a>
+            <a href="https://instagram.com" target="_blank" class="social-icon">
+              <span>Instagram</span>
+            </a>
+            <a href="https://youtube.com" target="_blank" class="social-icon">
+              <span>YouTube</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 Смушак Богдан. Всі права захищено.</p>
+    </div>
   </footer>
+  <!-- JavaScript -->
+  <script>
+    // Mobile menu toggle
+    const hamburger = document.querySelector('.hamburger');
+    const navMenu = document.querySelector('.nav-menu');
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      navMenu.classList.toggle('active');
+    });
+    // Close menu when clicking on nav links
+    document.querySelectorAll('.nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        navMenu.classList.remove('active');
+      });
+    });
+    // Course tabs functionality
+    const tabButtons = document.querySelectorAll('.tab-button');
+    const courseContents = document.querySelectorAll('.course-content');
+    tabButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        const course = button.getAttribute('data-course');
+        // Remove active class from all tabs and contents
+        tabButtons.forEach(tab => tab.classList.remove('active'));
+        courseContents.forEach(content => content.classList.remove('active'));
+        // Add active class to clicked tab and corresponding content
+        button.classList.add('active');
+        document.getElementById(course).classList.add('active');
+      });
+    });
+    // Smooth scrolling
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+    // Add scroll effect to navigation
+    window.addEventListener('scroll', () => {
+      const nav = document.querySelector('.nav');
+      if (window.scrollY > 100) {
+        nav.classList.add('scrolled');
+      } else {
+        nav.classList.remove('scrolled');
+      }
+    });
+  </script>
 </body>
 </html>
