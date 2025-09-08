@@ -1028,10 +1028,3 @@ img {
     outline: 2px solid #2405f2;
     outline-offset: 2px;
 }
-/* Print styles */
-@media print {
-    .header,
-    .hamburger,
-    .nav-menu {display: none;}
-    .section-wrapper {break-inside: avoid;}
-}
