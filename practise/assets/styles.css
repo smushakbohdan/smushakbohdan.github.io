@@ -208,6 +208,7 @@ img {
     align-items: center;
     justify-content: center;
     gap: 12px;
+    padding-top: 20px;
 }
 .hero-image {
     width: 100%;
@@ -526,7 +527,7 @@ img {
 .faq-item.active .faq-icon {transform: rotate(45deg);}
 /* Contact Section*/
 .contact-section {
-    padding: 60px 16px;
+    padding: 60px 0;
     position: relative;
     background-color: #1c1e53;
 }
@@ -537,6 +538,7 @@ img {
     margin: 0 auto;
     display: grid;
     gap: 32px;
+    padding: 0 16px;
 }
 .contact-intro {
     color: #ffffff;
@@ -760,6 +762,7 @@ img {
     .features-grid {grid-template-columns: repeat(2, 1fr);}
     .blog-grid {grid-template-columns: repeat(2, 1fr);}
     .contact-info {grid-template-columns: repeat(2, 1fr);}
+    .contact-content {padding: 0 24px;}
     /* Projects section*/
     .projects-header {
         flex-direction: row;
@@ -777,6 +780,7 @@ img {
         width: auto;
         height: auto;
         background-color: transparent;
+
     }
     .nav-items {
         flex-direction: row;
@@ -786,7 +790,6 @@ img {
     }
     .nav-item {
         font-size: 16px;
-        padding: 0;
         border-bottom: none;
     }
     .nav-item.contact-btn {
@@ -882,6 +885,7 @@ img {
         max-width: 600px;
         margin: 0 auto;
         text-align: center;
+        padding: 0 32px;
     }
     .contact-intro {text-align: center;}
     .contact-form {padding: 40px 32px;}
@@ -945,10 +949,10 @@ img {
     .faq-title {font-size: 24px;}
     .contact-section {padding: 80px 40px;}
     .contact-bg {width: 45%;}
+    .contact-content {padding: 0 40px;}
     .blog-section {padding: 80px 40px;}
     .footer {padding: 80px 0 0;}
 }
-
 /* LARGE DESKTOP (1201px and up) */
 @media (min-width: 1201px) {
     .container {padding: 0 48px;}
@@ -972,7 +976,11 @@ img {
     /* Other sections */
     .features-section {padding: 128px 56px;}
     .testimonial-section {padding: 128px 56px;}
-    .contact-section {padding: 128px 56px;}
+    .contact-section {
+        background-color: #ffffff; 
+        padding: 20px 0;      
+        position: relative;
+    }
     /* Contact with background*/
     .contact-bg {
         display: block;
@@ -998,15 +1006,56 @@ img {
         z-index: 2;
     }
     .contact-content {
-        grid-template-columns: 1fr 1fr;
-        align-items: center;
-        position: relative;
-        z-index: 3;
         max-width: 1280px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 32px;
+        align-items: center;
+        position: relative; 
+        z-index: 3;
+        background-color: #1c1e53;
+        padding: 48px;            
+        overflow: hidden;
+        box-sizing: border-box;
+    }
+    .contact-content .contact-bg {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 50%;
+        height: 100%;
+        background-image: url('images/img_https_www_pex_690x656.png'); 
+        background-size: cover;
+        background-position: center;
+        z-index: 1;
+        opacity: 0.95;
+    }
+    .contact-content .contact-overlay {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 50%;
+        height: 100%;
+        background-color: rgba(28, 30, 83, 0.6);
+        z-index: 2;
+    }
+    .contact-content > * {
+        position: relative;
+        z-index: 4;
+        color: #ffffff;
     }
     .contact-intro {text-align: left;}
-    .form-title {font-size: 32px;}
-    .form-description {font-size: 20px;}
+    .form-title {
+        font-size: 32px;
+        text-align: left;
+    }
+    .form-description {
+        font-size: 20px;
+        text-align: left;
+    }
     .form-input {
         padding: 22px 28px;
         font-size: 18px;
