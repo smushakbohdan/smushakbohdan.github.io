@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Завдання 3</title>
+</head>
+<body>
+  <h2>Завдання 3: Блоки з літерами прізвища</h2>
+  <button id="show">Показати блоки</button>
+  <div id="letters"></div>
+  <script>
+    let surname = "Smushak"; 
+    let btn = document.getElementById("show");
+    let container = document.getElementById("letters");
+    btn.addEventListener("click", () => {
+      if (container.innerHTML === "") {
+        for (let letter of surname) {
+          let div = document.createElement("div");
+          div.textContent = letter;
+          div.style.display = "inline-block";
+          div.style.margin = "5px";
+          div.style.padding = "10px";
+          div.style.border = "1px solid black";
+          div.addEventListener("mouseover", () => alert("Це літера " + letter));
+          container.appendChild(div);
+        }
+      } else {
+        container.innerHTML = "";
+      }
+    });
+  </script>
+</body>
+</html>

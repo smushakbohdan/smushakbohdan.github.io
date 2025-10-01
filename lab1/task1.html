@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Завдання 1</title>
+  <style>
+    li { display: table; }
+  </style>
+</head>
+<body>
+  <h2>Завдання 1: Літери імені</h2>
+  <ul id="list"></ul>
+  <script>
+    let name = "Bogdan"; 
+    let ul = document.getElementById("list");
+    for (let letter of name) {
+      let li = document.createElement("li");
+      li.textContent = letter;
+      li.addEventListener("mouseover", () => alert("Це літера " + letter));
+      ul.appendChild(li);
+    }
+  </script>
+</body>
+</html>
