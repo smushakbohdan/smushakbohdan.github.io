@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Завдання 1</title>
+</head>
+<body>
+  <h2>Завдання 1</h2>
+  <p>Створено функцію calculate() і в ній оголошено змінну result.
+Всередині if оголошено змінну з тим самим ім’ям result і присвоєно їй інше
+значення. Виведено результат обох змінних у консоль, щоб показати різницю у блочній
+області видимості.</p>
+  <script>
+    function calculate() {
+      let result = 10;
+      console.log("Значення result поза блоком if:", result);
+      if (true) {
+        let result = 20;
+        console.log("Значення result всередині блоку if:", result);
+      }
+      console.log("Після блоку if, result =", result);
+    }
+    calculate();
+  </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Завдання 2</title>
+</head>
+<body>
+  <h2>Завдання 2</h2>
+  <p>Оголошено константу secretNumber, значення якої обчислюється як залишок від
+ділення номера(16) у журналі на 10. Запитано у користувача число від 0 до 9
+через prompt. Якщо воно дорівнює secretNumber, виводить
+alert("Correct!"), інакше alert("Wrong!").</p>
+  <script>
+    const journalnumber = 16; 
+    const secretnumber = journalnumber % 10;
+    const userinput = +prompt("Введіть число від 0 до 9:");
+    if (userinput === secretnumber) {
+      alert("Correct!");
+    } else {
+      alert("Wrong!");
+    }
+  </script>
+</body>
+</html>
