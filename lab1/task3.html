@@ -17,10 +17,6 @@
         for (let letter of surname) {
           let div = document.createElement("div");
           div.textContent = letter;
-          div.style.display = "inline-block";
-          div.style.margin = "5px";
-          div.style.padding = "10px";
-          div.style.border = "1px solid black";
           div.addEventListener("mouseover", () => alert("Це літера " + letter));
           container.appendChild(div);
         }
@@ -31,3 +27,4 @@
   </script>
 </body>
 </html>
+
