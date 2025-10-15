@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Завдання 3</title>
+</head>
+<body>
+  <h2>Завдання 3</h2>
+  <p>Проєкт «Генератор діалогів». Мета: продемонструвати циклічну логіку генератора та зміну поведінки залежно від введення користувача.Створити генератор chatBot(), який у кожному кроці yield повертає запит до користувача:«Hi! What is your name?»«Nice to meet you, [name]! How are you?»«Goodbye!»На кожному кроці отримувати відповідь користувача через prompt і передавати її назад через next(answer).Очікуваний результат: проста текстова «розмова» між користувачем і ботом, що керується кроками генератора.</p>
+  <button id="start">Start chat</button>
+  <div id="out"></div>
+  <script>
+    function* chatBot() {
+      const name = yield "Hi! What is your name?";
+      const mood = yield `Nice to meet you, ${name}! How are you?`;
+      yield `You said: "${mood}". Goodbye!`;
+    }
+    const out = document.getElementById('out');
+    document.getElementById('start').onclick = () => {
+      const gen = chatBot();
+      let question = gen.next().value; 
+      let answer = prompt(question);
+      question = gen.next(answer).value;
+      answer = prompt(question);
+      question = gen.next(answer).value;
+      out.textContent = question; 
+    };
+  </script>
+</body>
+</html>

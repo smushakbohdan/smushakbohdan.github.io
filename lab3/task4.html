@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Завдання 4</title>
+</head>
+<body>
+  <h2>Завдання 4</h2>
+  <p>Втрата контексту методом. Мета: навчитись фіксувати контекст методу.Створити елемент button id="hello" Say /button на сторінці. Запитати у користувача ім’я.Створити об’єкт з полем name і методом say(), який виводить Hello, name.Призначити цей метод як обробник події кнопки. Пояснити, що при простому присвоєнні функції this втрачається.Реалізувати, щоб метод завжди бачив правильний this. Очікуваний результат: натиск на кнопку стабільно показує привітання з правильним ім’ям.</p>
+  <button id="hello">Say</button>
+  <div id="out"></div>
+  <script>
+    const out = document.getElementById('out');
+    const name = prompt("Введи своє ім'я:") || "Anonymous";
+    const person = {
+      name,
+      say() {
+        out.textContent = `Hello, ${this.name}!`;
+      }
+    };
+    const btn = document.getElementById('hello');
+    //При простому присвоєнні this втрачається
+    //btn.onclick = person.say;
+    //Виправлення через bind
+    btn.onclick = person.say.bind(person);
+    out.textContent = "Натисни 'Say', щоб побачити привітання!";
+  </script>
+</body>
+</html>

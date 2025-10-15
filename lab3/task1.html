@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Завдання 1</title>
+</head>
+<body>
+  <h2>Завдання 1</h2>
+  <p>1) Мета: навчитися створювати генератор, який повертає нове випадкове число при кожному виклику.Створити два елементи на сторінці: button id="next" Next number /button  та div id="out" /div.Написати функцію-генератор function* randomGenerator(min, max), що в нескінченному циклі while (true) генерує випадкове число між min і max.Запитувати у користувача межі для випадкового числа.Створити екземпляр генератора і виводити наступне число при кожному кліку на кнопку «Next». Очікуваний результат: кожен клік по кнопці дає нове випадкове число у визначених межах.</p>
+  <button id="next">Next number</button>
+  <div id="out">Натисни кнопку, щоб отримати випадкове число.</div>
+  <script>
+    function* randomGenerator(min, max) {
+      while (true) {
+        yield Math.floor(Math.random() * (max - min + 1)) + min;
+      }
+    }
+    const out = document.getElementById('out');
+    const btn = document.getElementById('next');
+    const min = parseInt(prompt("Введи мінімальне число:", "1"));
+    const max = parseInt(prompt("Введи максимальне число:", "100"));
+    const gen = randomGenerator(min, max);
+    btn.onclick = () => {
+      const { value } = gen.next();
+      out.textContent = `Випадкове число: ${value}`;
+    };
+  </script>
+</body>
+</html>

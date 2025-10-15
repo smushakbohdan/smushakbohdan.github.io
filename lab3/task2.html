@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Завдання 2</title>
+</head>
+<body>
+  <h2>Завдання 2</h2>
+  <p>Проєкт «Генератор паролів». Мета: продемонструвати передавання значень назад у генератор (next(value)).Реалізувати функцію function* passwordGenerator(), яка послідовно приймає символи через next() і формує пароль.Кожен виклик next() з аргументом додає символ до паролю; якщо аргумент 'done'- генератор завершується і повертає готовий пароль.Взаємодіяти через prompt: користувач вводить символи, поки не напише 'done'. Очікуваний результат: після вводу кількох символів і команди done програма виводить пароль, зібраний генератором.</p>
+  <button id="start">Start password generator</button>
+  <div id="out"></div>
+  <script>
+    function* passwordGenerator() {
+      let password = '';
+      while (true) {
+        const char = yield;
+        if (char === 'done') return password;
+        password += char;
+      }
+    }
+    const out = document.getElementById('out');
+    document.getElementById('start').onclick = () => {
+      const gen = passwordGenerator();
+      gen.next(); // запуск генератора
+      out.textContent = 'Введення символів...';
+      while (true) {
+        const char = prompt('Введи символ (або "done" щоб завершити):');
+        if (char === null) break;
+        const result = gen.next(char);
+        if (result.done) {
+          out.textContent = `Готовий пароль: ${result.value}`;
+          break;
+        }
+      }
+    };
+  </script>
+</body>
+</html>
