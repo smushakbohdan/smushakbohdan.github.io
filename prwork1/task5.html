@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Завдання 5</title>
+</head>
+<body>
+<h2>Завдання 5: Сума витрат клієнтів</h2>
+<div id="result"></div>
+<script>
+const orders = [
+  { orderId: 1, customer: { name: "Іван Петренко", email: "ivan@example.com" }, items: ["Ноутбук", "Мишка"], total: 25000 },
+  { orderId: 2, customer: { name: "Марія Іванова", email: "maria@example.com" }, items: ["Телефон"], total: 18000 },
+  { orderId: 3, customer: { name: "Іван Петренко", email: "ivan@example.com" }, items: ["Клавіатура", "Навушники"], total: 7000 },
+  { orderId: 4, customer: { name: "Олег Коваль", email: "oleg@example.com" }, items: ["Монітор"], total: 12000 }
+];
+function getTotalSpentByCustomer(orders, customerName) {
+  return orders
+    .filter(order => order.customer.name === customerName)
+    .reduce((sum, order) => sum + order.total, 0);
+}
+const resultDiv = document.getElementById("result");
+const customers = ["Іван Петренко", "Марія Іванова", "Олег Коваль"];
+customers.forEach(name => {
+  const total = getTotalSpentByCustomer(orders, name);
+  resultDiv.innerHTML += `<p>${name} витратив(ла) ${total} грн</p>`;
+});
+</script>
+</body>
+</html>

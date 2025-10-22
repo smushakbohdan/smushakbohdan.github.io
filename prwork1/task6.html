@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Завдання 6</title>
+</head>
+<body>
+<h2>Завдання 6: Загальний дохід від продажів</h2>
+<div id="result"></div>
+<script>
+const products = [
+  { productId: 1, name: "Ноутбук", price: 20000 },
+  { productId: 2, name: "Мишка", price: 500 },
+  { productId: 3, name: "Монітор", price: 8000 },
+  { productId: 4, name: "Клавіатура", price: 1500 }
+];
+const purchases = [
+  { purchaseId: 101, productId: 1, quantity: 3 },
+  { purchaseId: 102, productId: 2, quantity: 10 },
+  { purchaseId: 103, productId: 3, quantity: 2 },
+  { purchaseId: 104, productId: 4, quantity: 5 },
+  { purchaseId: 105, productId: 1, quantity: 1 }
+];
+function getTotalSales(products, purchases) {
+  return purchases.reduce((sales, purchase) => {
+    const product = products.find(p => p.productId === purchase.productId);
+    if (product) {
+      const revenue = product.price * purchase.quantity;
+      sales[product.name] = (sales[product.name] || 0) + revenue;
+    }
+    return sales;
+  }, {});
+}
+const resultDiv = document.getElementById("result");
+const sales = getTotalSales(products, purchases);
+for (const [product, revenue] of Object.entries(sales)) {
+  resultDiv.innerHTML += `<p>${product}: ${revenue} грн</p>`;
+}
+</script>
+</body>
+</html>
