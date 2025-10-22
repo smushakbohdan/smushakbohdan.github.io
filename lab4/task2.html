@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Завдання Індивідуальне</title>
+</head>
+<body>
+<h2>Предметна область - Колекція монет</h2>
+<script>
+const coin = {
+  country: "Україна",
+  year: 2001,
+  material: "Нікель",
+  nominal: 1,
+  inCollection: false,
+  coinInfo() {
+    console.log(
+      `Країна: ${this.country}, Рік: ${this.year}, Матеріал: ${this.material}, Номінал: ${this.nominal} грн, У колекції: ${this.inCollection ? "Так" : "Ні"}`
+    );
+  },
+  markAsCollected() {
+    this.inCollection = true;
+  }
+};
+coin.coinInfo();
+coin.inCollection = !coin.inCollection;
+coin.coinInfo();
+const collection = [
+  {
+    country: "Україна",
+    year: 2001,
+    material: "Мідь",
+    nominal: 1,
+    inCollection: true,
+    coinInfo() {
+      console.log(
+        `Країна: ${this.country}, Рік: ${this.year}, Матеріал: ${this.material}, Номінал: ${this.nominal} грн, У колекції: ${this.inCollection ? "Так" : "Ні"}`
+      );
+    },
+    markAsCollected() {
+      this.inCollection = true;
+    }
+  },
+  {
+    country: "Польща",
+    year: 1999,
+    material: "Срібло",
+    nominal: 2,
+    inCollection: false,
+    coinInfo() {
+      console.log(
+        `Країна: ${this.country}, Рік: ${this.year}, Матеріал: ${this.material}, Номінал: ${this.nominal} злотих, У колекції: ${this.inCollection ? "Так" : "Ні"}`
+      );
+    },
+    markAsCollected() {
+      this.inCollection = true;
+    }
+  },
+  {
+    country: "США",
+    year: 2015,
+    material: "Золото",
+    nominal: 1,
+    inCollection: true,
+    coinInfo() {
+      console.log(
+        `Країна: ${this.country}, Рік: ${this.year}, Матеріал: ${this.material}, Номінал: ${this.nominal} $, У колекції: ${this.inCollection ? "Так" : "Ні"}`
+      );
+    },
+    markAsCollected() {
+      this.inCollection = true;
+    }
+  }
+];
+function displayCollection() {
+  console.log("=== Вміст колекції монет ===");
+  collection.forEach(coin => coin.coinInfo());
+}
+displayCollection();
+collection.push({
+  country: "Канада",
+  year: 2020,
+  material: "Нікель",
+  nominal: 5,
+  inCollection: false,
+  coinInfo() {
+    console.log(
+      `Країна: ${this.country}, Рік: ${this.year}, Матеріал: ${this.material}, Номінал: ${this.nominal} центів, У колекції: ${this.inCollection ? "Так" : "Ні"}`
+    );
+  },
+  markAsCollected() {
+    this.inCollection = true;
+  }
+});
+console.log("\nПісля додавання нової монети:");
+displayCollection();
+const sortedByYear = [...collection].sort((a, b) => a.year - b.year);
+console.log("\n=== Сортування за роком випуску ===");
+sortedByYear.forEach(coin => coin.coinInfo());
+const uncollectedCoins = collection.filter(coin => !coin.inCollection);
+console.log("\n=== Непридбані монети ===");
+uncollectedCoins.forEach(coin => coin.coinInfo());
+const findUkraine = collection.find(coin => coin.country === "Україна");
+console.log("\n=== Знайдена монета з України ===");
+findUkraine.coinInfo();
+function addCoinFromUser() {
+  const country = prompt("Введіть країну монети:");
+  const year = +prompt("Введіть рік випуску:");
+  const material = prompt("Введіть матеріал:");
+  const nominal = +prompt("Введіть номінал:");
+  const inCollection = confirm("Чи є монета у вашій колекції?");
+  const newCoin = {
+    country,
+    year,
+    material,
+    nominal,
+    inCollection,
+    coinInfo() {
+      console.log(
+        `Країна: ${this.country}, Рік: ${this.year}, Матеріал: ${this.material}, Номінал: ${this.nominal}, У колекції: ${this.inCollection ? "Так" : "Ні"}`
+      );
+    },
+    markAsCollected() {
+      this.inCollection = true;
+    }
+  };
+  collection.push(newCoin);
+  console.log("\n=== Оновлена колекція ===");
+  displayCollection();
+}
+function calculateAverageYear() {
+  const total = collection.reduce((sum, coin) => sum + coin.year, 0);
+  return Math.round(total / collection.length);
+}
+console.log(`\nСередній рік випуску монет: ${calculateAverageYear()}`);
+</script>
+</body>
+</html>

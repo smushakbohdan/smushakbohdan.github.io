@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Робота з об'єктами та масивами — 1-4 приклад</title>
+</head>
+<body>
+  <h2>Перевірка результатів у консолі. 1-4 приклад</h2>
+<script>
+const book = {
+  title: "Harry Potter and the Sorcerer's Stone",
+  author: "J.K. Rowling",
+  year: 1997,
+  isRead: false,
+  bookInfo() {
+    console.log(
+      `Назва: ${this.title}, Автор: ${this.author}, Рік видання: ${this.year}, Прочитана: ${this.isRead ? "Так" : "Ні"}`
+    );
+  },
+  markAsRead() {
+    this.isRead = true;
+  }
+};
+book.bookInfo();
+book.isRead = !book.isRead;
+book.bookInfo();
+const library = [
+  {
+    title: "The Hobbit",
+    author: "J.R.R. Tolkien",
+    year: 1937,
+    isRead: false,
+    bookInfo() {
+      console.log(`Назва: ${this.title}, Автор: ${this.author}, Рік видання: ${this.year}, Прочитана: ${this.isRead ? "Так" : "Ні"}`);
+    },
+    markAsRead() {
+      this.isRead = true;
+    }
+  },
+  {
+    title: "1984",
+    author: "George Orwell",
+    year: 1949,
+    isRead: true,
+    bookInfo() {
+      console.log(`Назва: ${this.title}, Автор: ${this.author}, Рік видання: ${this.year}, Прочитана: ${this.isRead ? "Так" : "Ні"}`);
+    },
+    markAsRead() {
+      this.isRead = true;
+    }
+  },
+  {
+    title: "To Kill a Mockingbird",
+    author: "Harper Lee",
+    year: 1960,
+    isRead: false,
+    bookInfo() {
+      console.log(`Назва: ${this.title}, Автор: ${this.author}, Рік видання: ${this.year}, Прочитана: ${this.isRead ? "Так" : "Ні"}`);
+    },
+    markAsRead() {
+      this.isRead = true;
+    }
+  }
+];
+function displayLibrary() {
+  console.log("=== Вміст бібліотеки ===");
+  library.forEach(book => book.bookInfo());
+}
+displayLibrary();
+library.push({
+  title: "Brave New World",
+  author: "Aldous Huxley",
+  year: 1932,
+  isRead: false,
+  bookInfo() {
+    console.log(`Назва: ${this.title}, Автор: ${this.author}, Рік видання: ${this.year}, Прочитана: ${this.isRead ? "Так" : "Ні"}`);
+  },
+  markAsRead() {
+    this.isRead = true;
+  }
+});
+console.log("\nПісля додавання нової книги:");
+displayLibrary();
+const sortedByYear = [...library].sort((a, b) => a.year - b.year);
+console.log("\n=== Сортування за роком видання ===");
+sortedByYear.forEach(book => book.bookInfo());
+const unreadBooks = library.filter(book => !book.isRead);
+console.log("\n=== Непрочитані книги ===");
+unreadBooks.forEach(book => book.bookInfo());
+const findTolkien = library.find(book => book.author === "J.R.R. Tolkien");
+console.log("\n=== Книга, написана J.R.R. Tolkien ===");
+findTolkien.bookInfo();
+function addBookFromUser() {
+  const title = prompt("Введіть назву книги:");
+  const author = prompt("Введіть автора:");
+  const year = +prompt("Введіть рік видання:");
+  const isRead = confirm("Чи прочитана книга?");
+  const newBook = {
+    title,
+    author,
+    year,
+    isRead,
+    bookInfo() {
+      console.log(`Назва: ${this.title}, Автор: ${this.author}, Рік видання: ${this.year}, Прочитана: ${this.isRead ? "Так" : "Ні"}`);
+    },
+    markAsRead() {
+      this.isRead = true;
+    }
+  };
+  library.push(newBook);
+  console.log("\n=== Оновлена бібліотека ===");
+  displayLibrary();
+}
+function calculateAverageYear() {
+  const totalYears = library.reduce((sum, book) => sum + book.year, 0);
+  return Math.round(totalYears / library.length);
+}
+console.log(`\nСередній рік видання книг: ${calculateAverageYear()}`);
+</script>
+</body>
+</html>
