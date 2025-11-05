@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <title>Завдання 5 — Капча</title>
+  <style>
+    .captcha-container {
+      border: 1px solid #aaa;
+      background: #f4f4f4;
+      padding: 15px;
+      display: inline-block;
+      font-family: 'Courier New', Courier, monospace;
+    }
+    .captcha-label {
+      font-size: 18px;
+      font-weight: bold;
+      display: block;
+      margin-bottom: 10px;
+    }
+    #captcha {
+      display: flex; 
+      gap: 8px; 
+      background: #fff; 
+      border: 1px solid #999;
+      padding: 10px;
+      min-height: 60px;
+    }
+    .captcha-digit {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px; 
+    }
+    .pixel {
+      width: 10px; 
+      height: 10px; 
+      background-color: #f0f0f0;
+    }
+    .pixel.on {background-color: red;}
+    #result.success {color: green;}
+    #result.error {color: red; }
+  </style>
+</head>
+<body>
+  <h1>Завдання 5 — Капча</h1>
+  <label>Кількість цифр:</label>
+  <input id="digits" type="number" min="1" max="8" value="2"> <button id="refresh">Оновити</button>
+  <hr> <div class="captcha-container">
+    <label class="captcha-label">Введіть число</label>
+    <div id="captcha"></div>
+    <input id="input" type="text" placeholder="">
+    <p id="result"></p>
+    <button id="check">Перевірити</button>
+  </div>
+  <script src="js/task5.js"></script>
+</body>
+</html>

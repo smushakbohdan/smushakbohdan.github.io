@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <title>Завдання 4 — Ротатор зображень</title>
+  <style>
+    #rotator {
+      display: inline-block;
+      border: 1px solid #999;
+      padding: 10px;
+      background-color: #f8f8f8;
+      text-align: center;
+      width: auto; 
+    }
+    .photo-counter {
+      padding-bottom: 4px;
+      margin-bottom: 8px;
+      font-size: 14px;
+      color: #333;
+    }
+    .photo-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 8px;
+    }
+    .nav-link {
+      width: 60px; 
+      text-decoration: underline;
+      padding: 0 10px; 
+      flex-shrink: 0; 
+      cursor: pointer;
+    }
+    .image-frame {
+      border: 1px solid #ccc;
+      padding: 5px;  
+      margin: 0 10px; 
+    }
+    img {
+      max-width: 600px; 
+      height: 300;
+      display: block; 
+    }
+    .photo-caption {
+      border-top: 1px solid #ccc;
+      padding-top: 6px;
+      margin-top: 6px;
+    }
+    .title {font-weight: bold;}
+  </style>
+</head>
+<body>
+  <h1>Завдання 4 — Ротатор зображень (Футбольні команди)</h1>
+  <div id="rotator"></div>
+  <script src="js/task4.js"></script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <title>Завдання 2 — Таблиця множення</title>
+  <style>
+    .controls {
+      margin: 10px 0;
+    }
+    .task-row {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 8px;
+    }
+  </style>
+</head>
+<body>
+  <h1 style="font-size:18px;">Завдання 2 — Перевірка знань таблиці множення</h1>
+  <div id="scoreText">Загальний рахунок 0 % (0 правильних відповідей з 0)</div>
+  <div class="controls">
+    <button id="nextBtn">наступне завдання</button>
+  </div>
+  <div class="task-row">
+    <span id="taskText"> </span>
+    <input id="answerInput" type="text" inputmode="numeric" />
+    <button id="checkBtn">перевірити</button>
+  </div>
+  <div id="resultText"></div>
+  <script src="js/task2.js"></script>
+</body>
+</html>
