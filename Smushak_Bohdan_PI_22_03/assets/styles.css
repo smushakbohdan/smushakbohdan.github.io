@@ -1217,7 +1217,7 @@ img {
 }
 .who-we-are-section {
     background-color: #f4f6fc;
-    padding-left: 0 16px;
+    padding: 32px 16px;
     margin-bottom: 80px;
 }
 .who-we-are-content {
