@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторна 6 - Рівень І (10-12 балів)</title>
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>CSS Генератор - Варіант 16</h1>
+        <div id="tabs">
+            <div class="tabs-header">
+                <button class="tab">Border Radius</button>
+                <button class="tab">Text Align</button>
+                <button class="tab">Text Decoration</button>
+            </div>
+            <div class="tabContent">
+                <h2 class="section-title">Генератор Border Radius</h2>
+                <div class="generator-container">
+                    <div class="controls">
+                        <div class="control-row">
+                            <label>Верхній лівий:</label>
+                            <input type="range" id="rtl" min="0" max="100" value="0" oninput="generateBorderRadius()">
+                            <input type="text" id="ttl" value="0" readonly>
+                        </div>
+                        <div class="control-row">
+                            <label>Верхній правий:</label>
+                            <input type="range" id="rtr" min="0" max="100" value="0" oninput="generateBorderRadius()">
+                            <input type="text" id="ttr" value="0" readonly>
+                        </div>
+                        <div class="control-row">
+                            <label>Нижній правий:</label>
+                            <input type="range" id="rbr" min="0" max="100" value="0" oninput="generateBorderRadius()">
+                            <input type="text" id="tbr" value="0" readonly>
+                        </div>
+                        <div class="control-row">
+                            <label>Нижній лівий:</label>
+                            <input type="range" id="rbl" min="0" max="100" value="0" oninput="generateBorderRadius()">
+                            <input type="text" id="tbl" value="0" readonly>
+                        </div>
+                    </div>
+                    <div class="preview">
+                        <div id="block1" class="preview-box">Прев'ю</div>
+                        <textarea id="code1" readonly></textarea>
+                        <button class="copy-btn" onclick="copyCode('code1')">Копіювати CSS</button>
+                    </div>
+                </div>
+            </div>
+            <div class="tabContent">
+                <h2 class="section-title">Генератор Text Align</h2>
+                <div class="generator-container">
+                    <div class="controls">
+                        <div class="control-row">
+                            <label>Вирівнювання:</label>
+                            <select id="alignValue" onchange="generateTextAlign()">
+                                <option value="left">Left (ліворуч)</option>
+                                <option value="center">Center (по центру)</option>
+                                <option value="right">Right (праворуч)</option>
+                                <option value="justify">Justify (по ширині)</option>
+                            </select>
+                        </div>
+                        <div class="control-row">
+                            <label>Колір тексту:</label>
+                            <input type="color" id="textColor1" value="#333333" oninput="generateTextAlign()">
+                        </div>
+                        <div class="control-row">
+                            <label>Розмір шрифту:</label>
+                            <input type="range" id="fontSize1" min="12" max="48" value="18" oninput="generateTextAlign()">
+                            <input type="text" id="fontSizeText1" value="18" readonly>
+                        </div>
+                        <div class="control-row">
+                            <label>Колір фону:</label>
+                            <input type="color" id="bgColor1" value="#ffffff" oninput="generateTextAlign()">
+                        </div>
+                    </div>
+                    <div class="preview">
+                        <div id="block2" class="preview-box text-preview">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                        </div>
+                        <textarea id="code2" readonly></textarea>
+                        <button class="copy-btn" onclick="copyCode('code2')">Копіювати CSS</button>
+                    </div>
+                </div>
+            </div>
+            <div class="tabContent">
+                <h2 class="section-title">Генератор Text Decoration</h2>
+                <div class="generator-container">
+                    <div class="controls">
+                        <div class="control-row">
+                            <label>Лінія:</label>
+                            <select id="decorLine" onchange="generateTextDecoration()">
+                                <option value="none">None (без лінії)</option>
+                                <option value="underline">Underline (підкреслення)</option>
+                                <option value="overline">Overline (над текстом)</option>
+                                <option value="line-through">Line-through (закреслення)</option>
+                            </select>
+                        </div>
+                        <div class="control-row">
+                            <label>Стиль лінії:</label>
+                            <select id="decorStyle" onchange="generateTextDecoration()">
+                                <option value="solid">Solid (суцільна)</option>
+                                <option value="double">Double (подвійна)</option>
+                                <option value="dotted">Dotted (пунктирна)</option>
+                                <option value="dashed">Dashed (штрихова)</option>
+                                <option value="wavy">Wavy (хвиляста)</option>
+                            </select>
+                        </div>
+                        <div class="control-row">
+                            <label>Колір лінії:</label>
+                            <input type="color" id="decorColor" value="#667eea" oninput="generateTextDecoration()">
+                        </div>
+                        <div class="control-row">
+                            <label>Товщина лінії:</label>
+                            <input type="range" id="decorThickness" min="1" max="10" value="2" oninput="generateTextDecoration()">
+                            <input type="text" id="decorThicknessText" value="2" readonly>
+                        </div>
+                        <div class="control-row">
+                            <label>Колір тексту:</label>
+                            <input type="color" id="textColor2" value="#333333" oninput="generateTextDecoration()">
+                        </div>
+                        <div class="control-row">
+                            <label>Розмір шрифту:</label>
+                            <input type="range" id="fontSize2" min="12" max="48" value="24" oninput="generateTextDecoration()">
+                            <input type="text" id="fontSizeText2" value="24" readonly>
+                        </div>
+                        <div class="control-row">
+                            <label>Колір фону:</label>
+                            <input type="color" id="bgColor2" value="#ffffff" oninput="generateTextDecoration()">
+                        </div>
+                    </div>
+                    <div class="preview">
+                        <div id="block3" class="preview-box text-preview">
+                            <p>Це приклад тексту з декоративним оформленням. Text decoration дозволяє додавати різні лінії до тексту.</p>
+                        </div>
+                        <textarea id="code3" readonly></textarea>
+                        <button class="copy-btn" onclick="copyCode('code3')">Копіювати CSS</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="assets/script.js"></script>
+</body>
+</html>
