@@ -20,7 +20,7 @@
                     <a href="#" class="nav-item">Ціни</a>
                     <a href="#" class="nav-item">FAQ</a>
                     <a href="blog.html" class="nav-item">Блог</a>
-                    <a href="#" class="nav-item contact-btn">Зв’язатися з нами</a>
+                    <a href="#" class="nav-item contact-btn" id="openModalBtn">Зв’язатися з нами</a>
                 </div>
             </nav>
             <button class="hamburger" id="hamburgerBtn" aria-label="Перемикач навігації">
@@ -31,12 +31,12 @@
         </div>
     </header>
     <main class="main-content animate-on-scroll">
-        <div class="privacy-header">
+        <div class="text-header">
             <h1>Політика конфіденційності</h1>
             <p>Ми поважаємо вашу приватність та прагнемо забезпечити надійний захист персональних даних, які ви нам надаєте.</p>
         </div>
 
-        <div class="privacy-content">
+        <div class="text-content">
             <section class="content-section">
                 <h2>1. Загальна інформація</h2>
                 <p>
@@ -147,11 +147,77 @@
                     <a href="#" class="footer-nav-item">Ціни</a>
                     <a href="#" class="footer-nav-item">FAQ</a>
                     <a href="blog.html" class="footer-nav-item">Блог</a>
-                    <a href="policy.html" class="footer-nav-item">Політика конфіденційності</a>
+                    <a class="footer-nav-item">Політика конфіденційності</a>
                 </nav>
             </div>
         </div>
     </footer>
+    <div class="modal-overlay" id="modalOverlay">
+    <div class="modal">
+      <button class="modal-close" id="closeModalBtn">&times;</button>
+      <h2 class="modal-title">Зв'язатися з нами</h2>
+      <form id="contactForm">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Ім'я</label>
+            <input type="text" id="name" name="name" placeholder="Введіть ваше ім'я" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Введіть ваш Email" required>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="subject1">
+              Тема звернення
+              <div class="tooltip-wrapper">
+                <span class="tooltip-icon">?</span>
+                <span class="tooltip-text">Опишіть, що вас цікавить (наприклад: "Landing page для стартапу")</span>
+              </div>
+            </label>
+            <input type="text" id="subject1" name="subject1" placeholder="Що вас цікавить?" required>
+          </div>
+          <div class="form-group">
+            <label for="subject2">
+              Категорія
+              <div class="tooltip-wrapper">
+                <span class="tooltip-icon">?</span>
+                <span class="tooltip-text">Оберіть категорію вашого запиту</span>
+              </div>
+            </label>
+            <select id="subject2" name="subject2" required>
+              <option value="">Оберіть категорію</option>
+              <option value="general">📋 Загальне питання</option>
+              <option value="design">🎨 UI/UX дизайн</option>
+              <option value="development">💻 Веб-розробка</option>
+              <option value="mobile">📱 Мобільні додатки</option>
+              <option value="support">🔧 Технічна підтримка</option>
+              <option value="partnership">🤝 Партнерство</option>
+              <option value="pricing">💰 Ціни та пакети</option>
+              <option value="portfolio">📊 Портфоліо та кейси</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group full-width">
+            <label for="message">
+              Повідомлення
+              <div class="tooltip-wrapper">
+                <span class="tooltip-icon">?</span>
+                <span class="tooltip-text">Детально опишіть ваш запит або питання</span>
+              </div>
+            </label>
+            <textarea id="message" name="message" placeholder="Напишіть ваше запитання тут" required></textarea>
+          </div>
+        </div>
+        <button type="submit" class="submit-btn">Надіслати повідомлення</button>
+      </form>
+      <div class="modal-message" id="modalMessage"></div>
+    </div>
+  </div>
+    <button class="scroll-to-top" id="scrollToTop" aria-label="Повернутись на верх"></button>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script src="assets/script.js"></script>
 </body>
 </html>
