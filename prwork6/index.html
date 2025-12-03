@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог дитячих іграшок</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="cart-icon-wrapper">
+        <div class="cart-icon" onclick="openCart()">
+            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="9" cy="21" r="1"></circle>
+                <circle cx="20" cy="21" r="1"></circle>
+                <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+            </svg>
+            <span class="cart-count" id="cartCount">0</span>
+        </div>
+    </div>
+    <div class="catalog-container">
+        <h1 class="catalog-title">обов'язково додайте своє замовлення</h1>
+        <div class="products-wrapper">
+            <button class="swipe swipe-left" onclick="scrollProducts(-1)">&lt;</button>
+            <div class="product-card" data-id="1" data-name="Набір розумника" data-price="190" data-old-price="240" data-image="images/toy1.jpg">
+                <div class="badge new">Новинка</div>
+                <div class="product-tags">
+                    <a href="#" class="tag">Математика</a>
+                    <a href="#" class="tag">Усний рахунок</a>
+                </div>
+                <a href="https://kesha.com.ua/ua/razvivajushhie/razvivayuschiy-nabor-umnik/" class="product-image" target="_blank">
+                    <img src="images/toy1.jpg" alt="Набір розумника">
+                </a>
+                <a href="https://kesha.com.ua/ua/razvivajushhie/razvivayuschiy-nabor-umnik/" class="product-name" target="_blank">Набір розумника</a>
+                <div class="price">
+                    <span class="old-price">240 грн</span>
+                    <span class="current-price">190 грн</span>
+                </div>
+                <button class="add-to-cart" onclick="showQuantityModal(1)">У кошик</button>
+            </div>
+            <div class="product-card" data-id="2" data-name="Числобіг" data-price="320" data-image="images/toy2.jpg">
+                <div class="badge hit">Новий хіт</div>
+                <div class="product-tags">
+                    <a href="#" class="tag">Математика</a>
+                </div>
+                <a href="https://geekach.com.ua/chislobig-turboschet-ukr/" class="product-image" target="_blank">
+                    <img src="images/toy2.jpg" alt="Числобіг">
+                </a>
+                <a href="https://geekach.com.ua/chislobig-turboschet-ukr/" class="product-name" target="_blank">Числобіг</a>
+                <div class="price">
+                    <span class="current-price">320 грн</span>
+                </div>
+                <button class="add-to-cart" onclick="showQuantityModal(2)">У кошик</button>
+            </div>
+            <div class="product-card" data-id="3" data-name="Тварино-букви" data-price="450" data-image="images/toy3.jpg">
+                <div class="product-tags">
+                    <a href="#" class="tag">Букви та читання</a>
+                </div>
+                <a href="https://cd-market.ua/catalog/kartki_na_remeni_bukvi_i_tvarini_ukr_vt_2000_21_vladi_toys-product-6d072627-c98a-11ef-9757-000c29f3cf93/" class="product-image" target="_blank">
+                    <img src="images/toy3.jpg" alt="Тварино-букви">
+                </a>
+                <a href="https://cd-market.ua/catalog/kartki_na_remeni_bukvi_i_tvarini_ukr_vt_2000_21_vladi_toys-product-6d072627-c98a-11ef-9757-000c29f3cf93/" class="product-name" target="_blank">Тварино-букви</a>
+                <div class="price">
+                    <span class="current-price">450 грн</span>
+                </div>
+                <div class="coming-soon-text">Незабаром у продажі</div>
+            </div>
+            <div class="product-card" data-id="4" data-name="Логічний кубик" data-price="280" data-image="images/toy4.jpg">
+                <div class="badge new">Новинка</div>
+                <div class="product-tags">
+                    <a href="#" class="tag">Логіка</a>
+                    <a href="#" class="tag">Для малюків</a>
+                </div>
+                <a href="https://rozetka.com.ua/306111378/p306111378/" class="product-image" target="_blank">
+                    <img src="images/toy4.jpg" alt="Логічний кубик">
+                </a>
+                <a href="https://rozetka.com.ua/306111378/p306111378/" class="product-name" target="_blank">Логічний кубик</a>
+                <div class="price">
+                    <span class="current-price">280 грн</span>
+                </div>
+                <button class="add-to-cart" onclick="showQuantityModal(4)">У кошик</button>
+            </div>
+
+            <button class="swipe swipe-right" onclick="scrollProducts(1)">&gt;</button>
+        </div>
+    </div>
+    <div id="quantityModal" class="modal">
+        <div class="modal-content">
+            <h2>Вкажіть кількість:</h2>
+            <div class="quantity-selector">
+                <button onclick="changeQuantity(-1)">-</button>
+                <input type="number" id="quantityInput" value="1" min="1" max="99">
+                <button onclick="changeQuantity(1)">+</button>
+            </div>
+            <div class="modal-buttons">
+                <button class="btn-cancel" onclick="closeModal('quantityModal')">Скасувати</button>
+                <button class="btn-add" onclick="addToCart()">Додати до корзини</button>
+            </div>
+        </div>
+    </div>
+    <div id="addedModal" class="modal">
+        <div class="modal-content">
+            <div class="success-icon">✓</div>
+            <h2>Товар додано</h2>
+            <div class="modal-buttons">
+                <button class="btn-continue" onclick="closeModal('addedModal')">Повернутись до покупок</button>
+                <button class="btn-cart" onclick="goToCart()">Перейти у корзину</button>
+            </div>
+        </div>
+    </div>
+    <div id="emptyCartModal" class="modal">
+        <div class="modal-content">
+            <h2>Корзина пуста</h2>
+            <p>Додайте товари до корзини, щоб продовжити покупки</p>
+            <button class="btn-continue" onclick="closeModal('emptyCartModal')">Повернутись до покупок</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
