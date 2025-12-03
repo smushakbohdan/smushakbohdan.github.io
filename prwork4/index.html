@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geolocation Tracker</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="container">
+        <h1>🌍 Geolocation Tracker з Картою</h1>
+        <div class="subtitle">Відстеження вашої реальної позиції в режимі реального часу</div>
+        <div id="status"></div>
+        <div class="button-group">
+            <button id="watchButton">▶️ Почати відстеження</button>
+            <button id="clearWatchButton" disabled>⏹️ Зупинити відстеження</button>
+        </div>
+        <div class="info-panel">
+            <h3>📊 Інформація про вашу позицію</h3>
+            <div class="info-row">
+                <span class="info-label">Широта (Latitude):</span>
+                <span id="latitude" class="info-value">Очікування...</span>
+            </div>
+            <div class="info-row">
+                <span class="info-label">Довгота (Longitude):</span>
+                <span id="longitude" class="info-value">Очікування...</span>
+            </div>
+            <div class="info-row">
+                <span class="info-label">Точність:</span>
+                <span id="accuracy" class="info-value">Очікування...</span>
+            </div>
+            <div class="info-row">
+                <span class="info-label">Відстань до Коледжу:</span>
+                <span id="distance" class="info-value">Очікування...</span>
+            </div>
+            <div class="info-row">
+                <span class="info-label">Останнє оновлення:</span>
+                <span id="lastUpdate" class="info-value">Очікування...</span>
+            </div>
+        </div>
+        <div class="destination-panel">
+            <h3>🎯 Пункт призначення</h3>
+            <div class="input-row">
+                <input type="number" id="destLat" placeholder="Широта (наприклад: 48.9226)" step="any">
+                <input type="number" id="destLng" placeholder="Довгота (наприклад: 24.7111)" step="any">
+            </div>
+            <button id="goToDestination">🗺️ Перейти до пункту призначення</button>
+        </div>
+        <div id="map"></div>
+    </div>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
