@@ -95,7 +95,7 @@ window.addEventListener('scroll', () => {
 });
 
 (function() {
-    emailjs.init("xLk9hvLQW6-8Q849j");
+    emailjs.init("______");
 })();
 
 const openModalBtns = document.querySelectorAll('[data-open-modal]'); // ✅ Виправлено
@@ -346,4 +346,5 @@ document.addEventListener('DOMContentLoaded', function() {
         quoteSwiper.slideNext();
     };
     
+
 });
