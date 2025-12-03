@@ -1,0 +1,205 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+    width: 100%;
+    max-width: 600px;
+    padding: 40px;
+}
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 10px;
+    font-size: 2.5em;
+}
+.subtitle {
+    text-align: center;
+    color: #666;
+    margin-bottom: 30px;
+    font-size: 0.9em;
+}
+.input-container {margin-bottom: 30px;}
+#taskInput {
+    width: 100%;
+    padding: 15px 20px;
+    font-size: 16px;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    outline: none;
+}
+#taskInput:focus {
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+#taskInput::placeholder {color: #aaa;}
+.filter-buttons {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    justify-content: center;
+}
+.filter-btn {
+    padding: 10px 20px;
+    border: 2px solid #667eea;
+    background: white;
+    color: #667eea;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    font-size: 14px;
+}
+.filter-btn:hover {background: #f0f0f0;}
+.filter-btn.active {
+    background: #667eea;
+    color: white;
+}
+.tasks-container {
+    max-height: 400px;
+    overflow-y: auto;
+    padding-right: 5px;
+}
+.tasks-container::-webkit-scrollbar {width: 8px;}
+.tasks-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+.tasks-container::-webkit-scrollbar-thumb {
+    background: #667eea;
+    border-radius: 10px;
+}
+.tasks-container::-webkit-scrollbar-thumb:hover {background: #5568d3;}
+.task-item {
+    background: #f8f9fa;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+.task-item:hover {
+    background: #f0f0f0;
+    border-color: #e0e0e0;
+}
+.task-item.completed {
+    background: #e9ecef;
+    opacity: 0.7;
+}
+.task-checkbox {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    accent-color: #667eea;
+}
+.task-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.task-text {
+    font-size: 16px;
+    color: #333;
+    cursor: pointer;
+    word-wrap: break-word;
+}
+.task-item.completed .task-text {
+    text-decoration: line-through;
+    color: #999;
+}
+.task-date {
+    font-size: 12px;
+    color: #999;
+}
+.task-edit-input {
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
+    border: 2px solid #667eea;
+    border-radius: 5px;
+    outline: none;
+}
+.delete-btn {
+    background: #e74c3c;
+    color: white;
+    border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+}
+.delete-btn:hover {
+    background: #c0392b;
+    transform: scale(1.1);
+}
+.empty-state {
+    text-align: center;
+    padding: 40px 20px;
+    color: #999;
+}
+.empty-state-icon {
+    font-size: 60px;
+    margin-bottom: 15px;
+}
+.empty-state-text {font-size: 18px;}
+.stats {
+    margin-top: 20px;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.stat-number {
+    font-size: 24px;
+    font-weight: bold;
+    color: #667eea;
+}
+.stat-label {
+    font-size: 12px;
+    color: #666;
+    text-transform: uppercase;
+}
+@media (max-width: 600px) {
+    .container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    .filter-buttons {
+        flex-wrap: wrap;
+    }
+}
