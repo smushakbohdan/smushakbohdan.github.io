@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Завдання 4 - Порівняння чисел</title>
+    <link rel="stylesheet" href="task4.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Завдання 4 - Порівняння чисел</h1>
+        <div class="input-group">
+            <label for="num1">Перше число:</label>
+            <input type="number" id="num1" placeholder="Введіть перше число">
+        </div>
+        <div class="input-group">
+            <label for="num2">Друге число:</label>
+            <input type="number" id="num2" placeholder="Введіть друге число">
+        </div>
+        <button onclick="handleCompare()" id="compareBtn">Порівняти числа</button>
+        <div id="loader">
+            <div class="spinner"></div>
+            <p>Порівнюємо числа, зачекайте 1 секунду...</p>
+        </div>
+        <div id="result"></div>
+    </div>
+    <script src="task4.js"></script>
+</body>
+</html>

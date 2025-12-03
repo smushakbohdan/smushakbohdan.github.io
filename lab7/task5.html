@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Завдання 5 - Promise.all</title>
+    <link rel="stylesheet" href="task5.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Завдання 5 - Promise.all</h1>
+        
+        <div class="description">
+            <p><strong>Опис завдання:</strong></p>
+            <p>Promise 1: виконується через 1 секунду</p>
+            <p>Promise 2: виконується через 2 секунди</p>
+            <p>Promise 3: виконується через 3 секунди</p>
+            <p>Кожен повертає випадкове число від 1 до 10</p>
+            <p>Promise.all чекає завершення всіх трьох</p>
+        </div>
+        <button onclick="runPromiseAll()" id="runBtn">Запустити Promise.all</button>
+        <div id="loader">
+            <div class="spinner"></div>
+            <p>Очікуємо виконання всіх Promise...</p>
+        </div>
+        
+        <div id="result"></div>
+    </div>
+    <script src="task5.js"></script>
+</body>
+</html>
