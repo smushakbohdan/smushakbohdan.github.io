@@ -52,6 +52,17 @@ function displayLocation(position) {
     showStatus('Локацію оновлено: ' + timestamp.toLocaleTimeString('uk-UA'), 'success');
     updateMap(latitude, longitude, accuracy, timestamp);
 }
+function displayError(error) {
+    const errorMessages = {
+        0: "Невідома помилка при визначенні локації",
+        1: "Ви заборонили доступ до геолокації. Дозвольте доступ у налаштуваннях браузера.",
+        2: "Локацію неможливо визначити. Перевірте підключення до інтернету.",
+        3: "Час очікування визначення локації вичерпано. Спробуйте ще раз."
+    };
+    const errorMessage = errorMessages[error.code] || "Помилка визначення локації";
+    showStatus(errorMessage, 'error');
+    console.error("Geolocation error:", error);
+}
 function initMap() {
     map = L.map('map').setView([collegeCoords.latitude, collegeCoords.longitude], 13);
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -131,6 +142,7 @@ function watchLocation() {
     };
     watchId = navigator.geolocation.watchPosition(
         displayLocation,
+        displayError,
         options
     );
     document.getElementById("watchButton").disabled = true;
